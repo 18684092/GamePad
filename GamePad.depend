@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1561993518 source:/home/andyp/Documents/codeblocks/GamePad/main.cpp
+	<iostream>
+	"GamePad.h"
+
+1561992744 /home/andyp/Documents/codeblocks/GamePad/include/GamePad.h
+	<iostream>
+	<string>
+	<fcntl.h>
+	<unistd.h>
+	<cstdint>
+
+1561992912 source:/home/andyp/Documents/codeblocks/GamePad/src/GamePad.cpp
+	"GamePad.h"
+
