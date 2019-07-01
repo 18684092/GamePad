@@ -1,3 +1,10 @@
+/*
+
+Author: Andy Perrett 2019
+Course: BSc Computer Science Level 1
+
+*/
+
 #include <iostream>
 
 #include "GamePad.h"
