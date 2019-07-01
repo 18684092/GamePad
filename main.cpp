@@ -29,6 +29,7 @@ int main()
         {
             std::cout << "Button : " << b << " - " << e.button[b] << std::endl;
         }
+        std::cout << "Compass : " << e.Compass << std::endl;
     }
     return 0;
 }

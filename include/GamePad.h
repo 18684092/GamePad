@@ -18,6 +18,8 @@ Course: BSc Computer Science Level 1
 #define JS_EVENT_AXIS           0x02    /* joystick moved */
 #define JS_EVENT_INIT           0x80    /* initial state of device */
 
+#define SENSITIVITY             500     /* sensitivity of stick 1 */
+
 using namespace std;
 
 struct js_event
@@ -38,6 +40,7 @@ struct joystick
     int16_t y2Value;
     // Button array
     bool button[50];
+    string Compass;
 };
 
 class GamePad

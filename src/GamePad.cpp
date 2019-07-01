@@ -57,6 +57,24 @@ void GamePad::GetEvent(int deviceNumber)
         }
     }
     close(fd);
+    // Set Compass
+    if ((E.x1Value > SENSITIVITY) &&
+        (E.y1Value < SENSITIVITY && E.y1Value > -SENSITIVITY)) E.Compass = "E";
+    else if ((E.x1Value < -SENSITIVITY) &&
+        (E.y1Value < SENSITIVITY && E.y1Value > -SENSITIVITY)) E.Compass = "W";
+    else if ((E.x1Value < SENSITIVITY) &&
+        (E.x1Value > -SENSITIVITY) && (E.y1Value > SENSITIVITY)) E.Compass = "S";
+    else if ((E.x1Value < SENSITIVITY) &&
+        (E.x1Value > -SENSITIVITY) && (E.y1Value < -SENSITIVITY)) E.Compass = "N";
+    else if ((E.x1Value > SENSITIVITY) &&
+        (E.y1Value < -SENSITIVITY)) E.Compass = "NE";
+    else if ((E.x1Value < -SENSITIVITY) &&
+        (E.y1Value < -SENSITIVITY)) E.Compass = "NW";
+    else if ((E.x1Value < -SENSITIVITY) &&
+        (E.y1Value > SENSITIVITY)) E.Compass = "SW";
+    else if ((E.x1Value > SENSITIVITY) &&
+        (E.y1Value > SENSITIVITY)) E.Compass = "SE";
+    else E.Compass = "";
 }
 
 GamePad::~GamePad()
